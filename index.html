@@ -10,11 +10,14 @@
 
     <body>
         <div>Teachable Machine Image Model</div>
-        <div>version=1.1.2</div>
+        <div>version=1.1.3</div>
         <button type="button" onclick="init()">Start</button>
         <div id="webcam-container"></div>
         <div id="label-container"></div>
         <div id="BLINK"></div>
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
         <script type="text/javascript">
             // More API functions here:
             // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
@@ -51,31 +54,29 @@
                 }
             }
 
+            function printBLINK() {
+                document.getElementById("BLINK").innerHTML = "BLINK";
+                timerId = setTimeout(function () {
+                    document.getElementById("BLINK").innerHTML = "noooo";
+                }, 5000);
+            }
+
             async function loop() {
                 webcam.update(); // update the webcam frame
                 await predict();
                 window.requestAnimationFrame(loop);
             }
 
-            function printBLINK() {
-                document.getElementById("BLINK").innerHTML = "BLINK";
-                timerId = setTimeout(function () {
-                    document.getElementById("BLINK").innerHTML = "";
-                }, 1000);
-            }
-
             // run the webcam image through the image model
             async function predict() {
                 // predict can take in an image, video or canvas html element
                 const prediction = await model.predict(webcam.canvas);
-
-
                 for (let i = 0; i < maxPredictions; i++) {
                     const classPrediction =
                         prediction[i].className + ": " + prediction[i].probability.toFixed(2);
                     labelContainer.childNodes[i].innerHTML = classPrediction;
                 }
-                if (prediction[1].probability.toFixed(2) > 0.60) {
+                if (prediction[1].probability.toFixed(2) > 0.80) {
                     printBLINK();
                 }
             }
