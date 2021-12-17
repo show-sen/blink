@@ -10,14 +10,11 @@
 
     <body>
         <div>Teachable Machine Image Model</div>
-        <div>version=1.1.1</div>>
+        <div>version=1.1.1</div>
         <button type="button" onclick="init()">Start</button>
         <div id="webcam-container"></div>
         <div id="label-container"></div>
-        <div id="BLINK"></div>>
-        <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
-        <script
-            src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+        <div id="BLINK"></div>
         <script type="text/javascript">
             // More API functions here:
             // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
@@ -62,9 +59,9 @@
 
             function printBLINK() {
                 document.getElementById("BLINK").innerHTML = "BLINK";
-                timerId = setTimeout( function() {
-                    document.getElementById("BLINK").innerHTML = "noooo";
-                }, 5000);
+                timerId = setTimeout(function () {
+                    document.getElementById("BLINK").innerHTML = "";
+                }, 1000);
             }
 
             // run the webcam image through the image model
