@@ -77,8 +77,8 @@
                         prediction[i].className + ": " + prediction[i].probability.toFixed(2);
                     labelContainer.childNodes[i].innerHTML = classPrediction;
                 }
-                if (prediction[1].probability.toFixed(2) > 0.60) {
-                    window.location.href = "./blink.html";
+                if (prediction[1].probability.toFixed(2) > 0.80) {
+                    printBLINK();
                 }
             }
         </script>
