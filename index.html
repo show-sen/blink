@@ -26,7 +26,7 @@
 
         let model, webcam, labelContainer, maxPredictions;
 
-        let LPF = 0.0, lastLPF = 0.0;
+        let LPF = 0.0, lastLPF = 0.0,k=0.1;
 
         // Load the image model and setup the webcam
         async function init() {
@@ -78,7 +78,7 @@
                 labelContainer.childNodes[i].innerHTML = classPrediction;
             }
 
-            LPF = (1 - 0.5) * lastLPF + 0.5 * prediction[1].probability.toFixed(2);
+            LPF = (1 - k) * lastLPF + k * prediction[1].probability.toFixed(2);
             lastLPF = LPF;
             if (LPF > 0.80) {
                 printBLINK();
