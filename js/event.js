@@ -22,8 +22,12 @@ document.body.addEventListener("keyup", function (e) {
     }
 });
 
-function start() {
+function randomProblem() {
     giveProb(problems[getRandomInt(problems.length)]);
+}
+
+function getProblem(){
+    giveProb(document.getElementById("input").value);
 }
 
 function webcamCtrl() {

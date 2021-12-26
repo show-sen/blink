@@ -1,14 +1,12 @@
 #button {
-  width: 100px;
-  height: 100px;
-  margin: 0 auto 20px;
+  width: 60px;
+  height: 60px;
   background: rgb(29, 28, 28);
   border-radius: 50%;
 }
 #button::before {
-  width: 100px;
-  height: 100px;
-  margin: 0 auto 20px;
+  width: 60px;
+  height: 60px;
   background: rgb(29, 28, 28);
   border-radius: 50%;
 }
@@ -16,9 +14,19 @@
   background: rgb(83, 78, 78);
 }
 #r {
-  text-align: center;
+  text-align: left;
 }
 input{
   width: 30px;
   height: 12px;
+}
+.graph{
+  width: 0px;
+  height: 20px;
+  background: rgb(223, 168, 86);
+  border: 1px;
+}
+#input{
+  width: 100px;
+  height: 15px;
 }
