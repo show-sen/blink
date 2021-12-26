@@ -42,7 +42,9 @@ function webcamCtrl() {
 function recogSwitch(){
     if(recog == true){
         recog = false;
+        document.getElementById("recogS").innerHTML = "not recognition now";
     }else if(recog == false){
         recog = true;
+        document.getElementById("recogS").innerHTML = "recognition now";
     }
 }
