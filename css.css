@@ -1,0 +1,24 @@
+#button {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 20px;
+  background: rgb(29, 28, 28);
+  border-radius: 50%;
+}
+#button::before {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 20px;
+  background: rgb(29, 28, 28);
+  border-radius: 50%;
+}
+#button.active {
+  background: rgb(83, 78, 78);
+}
+#r {
+  text-align: center;
+}
+input{
+  width: 30px;
+  height: 12px;
+}
