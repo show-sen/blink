@@ -1,10 +1,10 @@
 window.onload = async function init() {
     //const modelURL = URL + "model.json";
     //const metadataURL = URL + "metadata.json";
-    //const modelURL = "https://show-sen.github.io/blink/my_model/model.json";
-    //const metadataURL = "https://show-sen.github.io/blink/my_model/metadata.json";
-    const modelURL = "https://show-sen.github.io/openmouth/my_model1/model.json";
-    const metadataURL = "https://show-sen.github.io/openmouth/my_model1/metadata.json";
+    const modelURL = "https://show-sen.github.io/blink/my_model/model.json";
+    const metadataURL = "https://show-sen.github.io/blink/my_model/metadata.json";
+    //const modelURL = "https://show-sen.github.io/openmouth/my_model1/model.json";
+    //const metadataURL = "https://show-sen.github.io/openmouth/my_model1/metadata.json";
 
 
     // load the model and metadata
